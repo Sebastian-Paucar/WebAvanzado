@@ -19,15 +19,20 @@ export class SidemenuComponent {
 
 
   public menuItems = routes
-  .map((route) => route.children ?? [])
+  .map(route => route.children ?? [])
   .flat()
-  .filter((route)=>route && route.path)
-  .filter((route) => !route.path?.includes(':'))
+  .map(route => [
+    route,
+    ...(route.children ?? []).filter(childRoute => childRoute.path && !childRoute.path.includes(':'))
+  ])
+  .flat()
+  .filter(route => route.path && !route.path.includes(':'));
+
 
   // Asume que `logout` está dentro de un componente o servicio que usa AuthService
 async signOut() {
   this.auth.signOut();
-  this.router.navigate(['/login']); 
+  this.router.navigate(['/login']);
 }
 
 

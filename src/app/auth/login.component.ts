@@ -54,7 +54,7 @@ export default class LoginComponent {
       // Aquí también podrías manejar el error mostrando un mensaje de error en la interfaz de usuario.
     }
   }
-  
+
   isValidField(field:string): boolean | null{
     return this.loginForm.controls[field].errors && this.loginForm.controls[field].touched;
   }
