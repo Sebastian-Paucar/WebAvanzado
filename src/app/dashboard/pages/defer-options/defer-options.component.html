@@ -1,1 +1,67 @@
-<p>defer-options works!</p>
+<div class="max-w-4xl mx-auto shadow-lg rounded-lg p-6 bg-white mt-10">
+  <form [formGroup]="equiposForm" (ngSubmit)="onSubmit()" class="space-y-6">
+    <!-- Nombre del Equipo -->
+    <div>
+      <label for="nombre_equipo" class="block text-sm font-medium text-gray-700">Nombre del Equipo:</label>
+      <input type="text" id="nombre_equipo" formControlName="nombre_equipo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+
+    <!-- Marca del Equipo -->
+    <div>
+      <label for="marca_equipo" class="block text-sm font-medium text-gray-700">Marca del Equipo:</label>
+      <input type="text" id="marca_equipo" formControlName="marca_equipo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+
+    <!-- Modelo del Equipo -->
+    <div>
+      <label for="modelo_equipo" class="block text-sm font-medium text-gray-700">Modelo del Equipo:</label>
+      <input type="text" id="modelo_equipo" formControlName="modelo_equipo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+
+    <!-- Serie del Equipo (Opcional) -->
+    <div>
+      <label for="serie_equipo" class="block text-sm font-medium text-gray-700">Serie del Equipo (Opcional):</label>
+      <input type="text" id="serie_equipo" formControlName="serie_equipo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+
+    <!-- Refrigerante del Equipo (Opcional) -->
+    <div>
+      <label for="refrigerante_equipo" class="block text-sm font-medium text-gray-700">Refrigerante del Equipo (Opcional):</label>
+      <input type="text" id="refrigerante_equipo" formControlName="refrigerante_equipo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+
+    <!-- Campos numéricos en Grid -->
+    <div class="grid grid-cols-2 gap-4">
+      <!-- Voltaje del Equipo -->
+      <div>
+        <label for="voltaje_equipo" class="block text-sm font-medium text-gray-700">Voltaje del Equipo:</label>
+        <input type="number" id="voltaje_equipo" formControlName="voltaje_equipo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      </div>
+
+      <!-- Presión A del Equipo -->
+      <div>
+        <label for="presionA_equipo" class="block text-sm font-medium text-gray-700">Presión A del Equipo:</label>
+        <input type="number" id="presionA_equipo" formControlName="presionA_equipo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      </div>
+
+      <!-- Presión B del Equipo -->
+      <div>
+        <label for="presionB_equipo" class="block text-sm font-medium text-gray-700">Presión B del Equipo:</label>
+        <input type="number" id="presionB_equipo" formControlName="presionB_equipo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      </div>
+
+      <!-- Amperaje del Equipo -->
+      <div>
+        <label for="Amperaje_equipo" class="block text-sm font-medium text-gray-700">Amperaje del Equipo:</label>
+        <input type="number" id="Amperaje_equipo" formControlName="Amperaje_equipo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      </div>
+    </div>
+
+    <!-- Botón de envío -->
+    <div class="flex justify-end">
+      <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Guardar
+      </button>
+    </div>
+  </form>
+</div>

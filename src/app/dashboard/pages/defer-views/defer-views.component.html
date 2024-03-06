@@ -1,1 +1,57 @@
-<p>defer-views works!</p>
+<div class="max-w-6xl mx-auto shadow-lg rounded-lg p-6 bg-white mt-10">
+  <h2 class="text-2xl font-bold mb-5 text-gray-900">Registro de Cliente</h2>
+  <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()" class="space-y-4">
+      <!-- Correo -->
+      <div>
+          <label for="correo" class="block text-sm font-medium text-gray-700">Correo</label>
+          <input type="email" id="correo" formControlName="correo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="ejemplo@correo.com">
+      </div>
+
+      <!-- Rol -->
+      <div>
+          <label for="rol" class="block text-sm font-medium text-gray-700">Rol</label>
+          <select id="rol" formControlName="rol" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              <option value="Cliente">Cliente</option>
+              <option value="Empleado">Empleado</option>
+              <option value="Administrador">Administrador</option>
+          </select>
+      </div>
+
+      <!-- Usuario -->
+      <div>
+          <label for="user" class="block text-sm font-medium text-gray-700">Usuario</label>
+          <input type="text" id="user" formControlName="user" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nombre de usuario">
+      </div>
+
+      <!-- Password -->
+      <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+          <input type="password" id="password" formControlName="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Contraseña">
+      </div>
+
+      <!-- Dirección -->
+      <div>
+          <label for="direccion_cliente" class="block text-sm font-medium text-gray-700">Dirección</label>
+          <input type="text" id="direccion_cliente" formControlName="direccion_cliente" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Dirección completa">
+      </div>
+
+      <!-- Teléfono -->
+      <div>
+          <label for="telefono_cliente" class="block text-sm font-medium text-gray-700">Teléfono</label>
+          <input type="text" id="telefono_cliente" formControlName="telefono_cliente" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Número de teléfono">
+      </div>
+
+      <!-- Nombre de la Empresa -->
+      <div>
+          <label for="nombre_empresa" class="block text-sm font-medium text-gray-700">Nombre de la Empresa</label>
+          <input type="text" id="nombre_empresa" formControlName="nombre_empresa" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Empresa">
+      </div>
+
+      <!-- Botón de envío -->
+      <div class="flex justify-end">
+          <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Registrar
+          </button>
+      </div>
+  </form>
+</div>

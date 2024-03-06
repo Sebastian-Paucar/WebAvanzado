@@ -25,6 +25,15 @@ export const routes: Routes = [
         data: { icon: 'fas fa-check-circle' },
         loadComponent: () => import('./dashboard/pages/control-flow/control-flow.component'),
         canActivate: [AuthGuard],
+        children:[
+          {
+            path: 'nuevo',
+            title: 'Nuevo',
+            loadComponent: () => import('./dashboard/pages/defer-options/defer-options.component'),
+            canActivate: [AuthGuard], // Repite este patrón para cada ruta que necesites proteger
+          }
+
+        ]
       },
       {
         path: 'equipos',
@@ -45,20 +54,20 @@ export const routes: Routes = [
         canActivate: [AuthGuard],
       },
       {
-        path: 'user-list',
-        title: 'User List',
+        path: 'tareas',
+        title: 'Tareas',
         loadComponent: () => import('./dashboard/pages/users/users.component'),
         canActivate: [AuthGuard],
       },
+      // {
+      //   path: 'view-transition',
+      //   title: 'View Transition',
+      //   loadComponent: () => import('./dashboard/pages/view-transition/view-transition.component'),
+      //   canActivate: [AuthGuard],
+      // },
       {
-        path: 'view-transition',
-        title: 'View Transition',
-        loadComponent: () => import('./dashboard/pages/view-transition/view-transition.component'),
-        canActivate: [AuthGuard],
-      },
-      {
-        path: '', 
-        redirectTo: 'informes', 
+        path: '',
+        redirectTo: 'informes',
         pathMatch: 'full'
       }
     ]
