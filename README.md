@@ -9,7 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Credenciales de Prueba
 
-- Correo:`admin@admn.com`
+- Correo:`admin@admin.com`
 - passowrd:`adminadmin`
 
 

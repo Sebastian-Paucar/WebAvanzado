@@ -25,15 +25,7 @@ export const routes: Routes = [
         data: { icon: 'fas fa-check-circle' },
         loadComponent: () => import('./dashboard/pages/control-flow/control-flow.component'),
         canActivate: [AuthGuard],
-        children:[
-          {
-            path: 'nuevo',
-            title: 'Nuevo',
-            loadComponent: () => import('./dashboard/pages/defer-options/defer-options.component'),
-            canActivate: [AuthGuard], // Repite este patrón para cada ruta que necesites proteger
-          }
 
-        ]
       },
       {
         path: 'equipos',
