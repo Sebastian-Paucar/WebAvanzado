@@ -23,6 +23,7 @@ export default class UsersComponent {
     if (this.tareasForm.valid) {
       console.log('Formulario de Tareas:', this.tareasForm.value);
       this.tareasService.insertarTarea(this.tareasForm);
+      this.tareasForm.reset();
       // Aquí iría la lógica para procesar los datos del formulario, como enviarlos a un backend.
     } else {
       console.log('Formulario no válido');
