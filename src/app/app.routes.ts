@@ -50,6 +50,13 @@ export const routes: Routes = [
         title: 'Tareas',
         loadComponent: () => import('./dashboard/pages/users/users.component'),
         canActivate: [AuthGuard],
+
+      },
+      {
+        path: 'lista',
+        title: 'Lista',
+        loadComponent: () => import('./dashboard/pages/view-transition/view-transition.component'),
+        canActivate: [AuthGuard],
       },
       // {
       //   path: 'view-transition',
